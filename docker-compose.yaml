@@ -1,0 +1,9 @@
+version: '3'
+services:
+  sent:
+    build: .
+    environment:
+      - DISPLAY=$DISPLAY # Link X11 server in Linux
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix # Link X11 server in Linux
+    command: "-c #ffffff -b #000000 ./example"
